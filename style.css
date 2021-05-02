@@ -1,0 +1,431 @@
+body {
+    cursor: url('./img/small-cursor.png'), auto;
+    overflow-x: hidden;
+    margin: 0;
+    background: #7F7FD5;
+    background: linear-gradient(to right, #79ebff, #ffffffd2, #67a4ff);
+    backdrop-filter: blur(50px);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+}
+
+.card1 {
+    position: absolute;
+    top: 22%;
+    left: 2%;
+    width: 30%;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(250px);
+    height: fit-content;
+    border: solid 2px white;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+
+
+.Analys {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Analys canvas {
+    position: relative;
+}
+
+.A-canvas,
+.A-canvas:nth-child(1) {
+    border-radius: 1vh 1vh 0vh 0vh;
+    display: block;
+    background: #494949;
+    margin-top: 0;
+    border: 1px solid red;
+}
+
+.A-canvas:nth-child(2) {
+    border-radius: 0vh 0vh 1vh 1vh;
+    margin-top: 0;
+}
+
+.card2 {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: 10%;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(250px);
+    height: fit-content;
+    border: solid 2px white;
+    border-radius: 2vh;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#record {
+    z-index: 1000;
+    height: 150px;
+    width: 150px;
+    cursor: url(./img/small-Cursor_Hand.png), auto;
+    outline: none;
+}
+
+#record.recording {
+    z-index: 1000;
+    border-radius: 100%;
+    animation: R 3s infinite linear;
+    animation-delay: 0.001;
+}
+
+@keyframes R {
+    0% {
+        background-color: rgba(255, 0, 0, 0);
+        border: 1px solid rgba(255, 0, 0, 0);
+    }
+
+    50% {
+        background-color: rgba(255, 0, 0, 0.45);
+        border: 1px solid red;
+    }
+
+    100% {
+        background-color: rgba(255, 0, 0, 0);
+        border: 1px solid rgba(255, 0, 0, 0);
+    }
+}
+
+#save,
+#save img {
+    outline: none;
+    height: 150px;
+    width: 150px;
+    z-index: 1000;
+}
+
+#save {
+    margin-top: 5vh;
+    display: inline-block;
+    opacity: 0.25;
+    height: 150px;
+    width: 150px;
+    cursor: url(./img/small-Cursor_Hand.png), auto;
+}
+
+#save[download] {
+    transition: linear 1s;
+    opacity: 1;
+}
+
+.nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 0vh 0vh 4vh 4vh;
+    background-color: #494949;
+    width: 30%;
+    height: fit-content;
+    padding: .5vw 1vw;
+    z-index: 999;
+}
+
+.about {
+    width: 6vw;
+    height: 2.5vw;
+    border: 3px solid white;
+    border-radius: 10vw;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    cursor: url(./img/small-Cursor_Hand.png), auto;
+}
+
+.about a {
+    color: white;
+    text-decoration: transparent;
+    font-size: 1.6vw;
+    cursor: url(./img/small-Cursor_Hand.png), auto;
+}
+
+.colors {
+    height: 3.5vh;
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    border: 2px solid white;
+    border-radius: 20vw;
+    padding: .5vh;
+    cursor: url(./img/small-Cursor_Hand.png), auto;
+}
+
+.color {
+    width: 1.7vw;
+    height: 1.7vw;
+    border-radius: 100%;
+    margin: 0 1vh;
+}
+
+.color1 {
+    background: linear-gradient(to right, #ff9999, #cefdefd2, #9ce0ff);
+}
+
+.color2 {
+    background: linear-gradient(to right, #ffd695, #ffddddaf, #52ffff);
+}
+
+.color3 {
+    background: linear-gradient(to right, #efff95f6, #ff7a6daf, #73ff96e3);
+}
+
+.color4 {
+    background: linear-gradient(to right, #ffd5f594, #e6afff, #cfe9fdd2, #d4ff9d);
+}
+
+.color5 {
+    background: linear-gradient(to right, #ffdd804f, #ff8080a2, #1900ff3a, #b6ff576c);
+}
+
+.clicked {
+    border: 2px solid white;
+    transition: all .3s linear;
+}
+
+
+@media (max-width: 600px) {
+
+
+    .card1 {
+        top: 5%;
+        width: 61%;
+    }
+
+    .nav {
+        position: absolute;
+        top: 4%;
+        right: 6%;
+        width: 21%;
+        height: 37%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4vh 4vh 4vh 4vh;
+        padding: 1vw .5vw;
+    }
+
+    .about {
+        width: 16vw;
+        height: 6vw;
+    }
+
+    .about a {
+        font-size: 4.5vw;
+    }
+
+    .colors {
+        flex-direction: column;
+        height: 80%;
+        width: 8vw;
+        justify-content: space-evenly;
+    }
+
+    .color {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .card2 {
+        top: 70%;
+        right: 11%;
+    }
+
+    #record {
+        height: 50px;
+        width: 50px;
+    }
+
+    #save {
+        height: 50px;
+        width: 50px;
+    }
+
+    #save img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .scene {
+        top: 20%;
+        width: 90vw;
+        height: 82vh;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .scene {
+        width: 90vw;
+        height: 82vh;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+
+    .card1 {
+        top: 5%;
+        width: 61%;
+    }
+
+    .nav {
+        position: absolute;
+        top: 4%;
+        right: 6%;
+        width: 21%;
+        height: 37%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4vh 4vh 4vh 4vh;
+        padding: 1vw .5vw;
+    }
+
+    .about {
+        width: 16vw;
+        height: 6vw;
+    }
+
+    .about a {
+        font-size: 4.5vw;
+    }
+
+    .colors {
+        flex-direction: column;
+        height: 80%;
+        width: 8vw;
+        justify-content: space-evenly;
+    }
+
+    .color {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .card2 {
+        top: 70%;
+        right: 11%;
+    }
+
+    #record {
+        height: 50px;
+        width: 50px;
+    }
+
+    #save {
+        height: 50px;
+        width: 50px;
+    }
+
+    #save img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .scene {
+        top: 20%;
+        width: 90vw;
+        height: 82vh;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1029px) {
+
+    .card1 {
+        top: 2%;
+        width: 55%;
+    }
+
+    .nav {
+        position: absolute;
+        top: 2%;
+        right: 6%;
+        width: 21%;
+        height: 43%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4vh 4vh 4vh 4vh;
+        padding: 1vw .5vw;
+    }
+
+    .about {
+        width: 16vw;
+        height: 6vw;
+    }
+
+    .about a {
+        font-size: 4.5vw;
+    }
+
+    .colors {
+        flex-direction: column;
+        height: 80%;
+        width: 8vw;
+        justify-content: space-evenly;
+    }
+
+    .color {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .card2 {
+        top: 70%;
+        right: 11%;
+    }
+
+    #record {
+        height: 100px;
+        width: 100px;
+    }
+
+    #save {
+        height: 100px;
+        width: 100px;
+    }
+
+    #save img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .scene {
+        top: 25%;
+        width: 90vw;
+        height: 82vh;
+    }
+
+}

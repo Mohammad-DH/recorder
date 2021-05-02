@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./img/mic.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="js/audiodisplay.js"></script>
+    <script src="js/recorderjs/recorder.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="card1">
+            <div class="Analys" id="viz">
+                <canvas class="A-canvas" id="analyser"></canvas>
+                <canvas class="A-canvas" id="wavedisplay"></canvas>
+            </div>
+
+        </div>
+
+        <div class="card2">
+            <div id="controls">
+                <img id="record" src="./img/mic128.png" onclick="toggleRecording(this),rotate();">
+                <a id="save" href="#"><img src="./img/save.svg"></a>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="about">
+                <a href="#">
+                    about
+                </a>
+            </div>
+
+            <div class="colors">
+                <span class="color color1"></span>
+                <span class="color color2"></span>
+                <span class="color color3"></span>
+                <span class="color color4"></span>
+                <span class="color color5"></span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="scene"></div>
+
+    <script src="./three.min.js"></script>
+    <script src="./GLTFLoader.js"></script>
+    <script src="./app.js"></script>
+    <script src="./color.js"></script>
+</body>
+
+</html>
